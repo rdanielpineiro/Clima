@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import axios from 'axios';
-import CurrentWeather from './components/currentWeather';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTemperatureHalf } from '@fortawesome/free-solid-svg-icons';
 import { faWind } from '@fortawesome/free-solid-svg-icons';
