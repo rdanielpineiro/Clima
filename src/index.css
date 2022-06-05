@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+}
+
+h2 {
+  margin: 15px;
+  color: #fff;
+}
+
+ul {
+  margin: 10px;
+  color: #fff;
+  text-align: start;
+
+}
+
+li {
+  list-style: none;
+}
+
+#App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('img/fondoclima.jpg');
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-position: center center !important;
+  z-index: auto;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+
+}
+
+.today_weather {
+  align-self: center;
+  background: rgba(0, 0, 0, 0.4);
+  width: min(400px, 100%);
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.item_flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.loc_flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.description_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.three_days_weather {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.days_weather {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 50px;
+  width: min(200px, 100%);
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+input:checked+.slider::before {
+  transform: translateX(26px);
+}
