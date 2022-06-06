@@ -22,7 +22,7 @@ function App() {
 
   const lang = 'es'
   const [watherDays, setwatherDays] = useState()
-  const [isActive, setisActive] = useState(false)
+  const [isActive, setisActive] = useState(true)
   const [loading, setLoading] = useState(false)
   const [weather, setWeather] = useState()
   const [latlong, setlatlong] = useState({})
@@ -70,9 +70,7 @@ function App() {
 
   useEffect(() => {
     setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-    }, 10000)
+
   }, [])
 
 
@@ -86,7 +84,7 @@ function App() {
         .then(res => setwatherDays(res.data))
         .catch(err => console.log(err))
       axios.get(urlWeatherMap)
-        .then(res => setWeather(res.data))
+        .then(res => setWeather(res.data), setLoading(false))
         .catch(err => console.log(err))
     }
   }, [latlong])
