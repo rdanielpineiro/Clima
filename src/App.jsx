@@ -12,6 +12,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 
 
+
 function App() {
   let iconURL = 'http://openweathermap.org/img/wn/10d@2x.png'
   // Objeto para acceder a los iconos 
@@ -113,7 +114,7 @@ function App() {
                   </div>
                   <div className='description_flex'>
                     <ul>
-                      <li> <b><FontAwesomeIcon icon={faTemperatureHalf} /> </b>{isActive ? `${(weather?.main.temp)}` : `${(weather?.main.temp - 273).toFixed(2)}`} <b>{isActive ? '°F' : '°C'}</b></li>
+                      <li> <b><FontAwesomeIcon icon={faTemperatureHalf} /> </b>{isActive ? `${((((weather?.main.temp - 273.15) * 9) / 5) + 32).toFixed(2)}` : `${(weather?.main.temp - 273).toFixed(2)}`} <b>{isActive ? '°F' : '°C'}</b></li>
                       <li><b><FontAwesomeIcon icon={faWind} /></b>  {weather?.wind.speed} <b> m/s</b></li>
                       <li><b><FontAwesomeIcon icon={faCloudSun} /> </b>  {weather?.weather[0].main}</li>
                       <li><b><FontAwesomeIcon icon={faDroplet} /> </b>  {weather?.main.humidity} <b> %</b></li>
@@ -136,7 +137,7 @@ function App() {
                       <img src={getIcon(watherDays?.list[8].weather[0].icon)} />
                     </div>
                     <ul>
-                      <li> <b><FontAwesomeIcon icon={faTemperatureHalf} /> </b>{isActive ? `${(watherDays?.list[8].main.temp)}` : `${(watherDays?.list[8].main.temp - 273).toFixed(2)}`} <b>{isActive ? '°F' : '°C'}</b></li>
+                      <li> <b><FontAwesomeIcon icon={faTemperatureHalf} /> </b>{isActive ? `${((((watherDays?.list[8].main.temp - 273.15) * 9) / 5) + 32).toFixed(2)}` : `${(watherDays?.list[8].main.temp - 273).toFixed(2)}`} <b>{isActive ? '°F' : '°C'}</b></li>
                       <li><b><FontAwesomeIcon icon={faWind} /></b>  {watherDays?.list[8].wind.speed} <b> m/s</b></li>
                       <li><b><FontAwesomeIcon icon={faCloudSun} /> </b>  {watherDays?.list[8].weather[0].main}</li>
                       <li><b><FontAwesomeIcon icon={faDroplet} /> </b>  {watherDays?.list[8].main.humidity} <b> %</b></li>
@@ -149,7 +150,7 @@ function App() {
                     <img src={getIcon(watherDays?.list[16].weather[0].icon)} />
                   </div>
                   <ul>
-                    <li> <b><FontAwesomeIcon icon={faTemperatureHalf} /> </b>{isActive ? `${(watherDays?.list[16].main.temp)}` : `${(watherDays?.list[16].main.temp - 273).toFixed(2)}`} <b>{isActive ? '°F' : '°C'}</b></li>
+                    <li> <b><FontAwesomeIcon icon={faTemperatureHalf} /> </b>{isActive ? `${((((watherDays?.list[16].main.temp - 273.15) * 9) / 5) + 32).toFixed(2)}` : `${(watherDays?.list[16].main.temp - 273).toFixed(2)}`} <b>{isActive ? '°F' : '°C'}</b></li>
                     <li><b><FontAwesomeIcon icon={faWind} /></b>  {watherDays?.list[16].wind.speed} <b> m/s</b></li>
                     <li><b><FontAwesomeIcon icon={faCloudSun} /> </b>  {watherDays?.list[16].weather[0].main}</li>
                     <li><b><FontAwesomeIcon icon={faDroplet} /> </b>  {watherDays?.list[16].main.humidity} <b> %</b></li>
@@ -161,7 +162,7 @@ function App() {
                     <img src={getIcon(watherDays?.list[24].weather[0].icon)} />
                   </div>
                   <ul>
-                    <li> <b><FontAwesomeIcon icon={faTemperatureHalf} /> </b>{isActive ? `${(watherDays?.list[24].main.temp)}` : `${(watherDays?.list[24].main.temp - 273).toFixed(2)}`} <b>{isActive ? '°F' : '°C'}</b></li>
+                    <li> <b><FontAwesomeIcon icon={faTemperatureHalf} /> </b>{isActive ? `${((((watherDays?.list[24].main.temp - 273.15) * 9) / 5) + 32).toFixed(2)}` : `${(watherDays?.list[24].main.temp - 273).toFixed(2)}`} <b>{isActive ? '°F' : '°C'}</b></li>
                     <li><b><FontAwesomeIcon icon={faWind} /></b>  {watherDays?.list[24].wind.speed} <b> m/s</b></li>
                     <li><b><FontAwesomeIcon icon={faCloudSun} /> </b>  {watherDays?.list[24].weather[0].main}</li>
                     <li><b><FontAwesomeIcon icon={faDroplet} /> </b>  {watherDays?.list[24].main.humidity} <b> %</b></li>
