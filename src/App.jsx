@@ -89,16 +89,16 @@ function App() {
     }
   }, [latlong])
   const toggle = () => setisActive(!isActive)
+  const climaCambio = weather?.weather[0].main
 
 
-
-  console.log(watherDays?.list[8].weather[0].icon)
+  console.log(weather?.weather[0].main)
   const today_weather = {}
 
 
   return (
 
-    <article className="App">
+    <article className={climaCambio === 'Clouds' ? 'nubes' : climaCambio === 'Rain' ? 'lluvia' : climaCambio === 'Clear sky' ? 'sun' : 'App'}>
       {
         loading ? (<ClipLoader color={'#cbddff'} loading={loading} size={150} />)
           :

@@ -41,6 +41,51 @@ li {
 
 }
 
+.lluvia {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('img/lluvia.jpg');
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-position: center center !important;
+  z-index: auto;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+
+}
+
+.sun {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('img/soleado.jpg');
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-position: center center !important;
+  z-index: auto;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+
+}
+
+.nubes {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('img/nubes.jpg');
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-position: center center !important;
+  z-index: auto;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+
+}
+
 .today_weather {
   align-self: center;
   background: rgba(0, 0, 0, 0.4);
